@@ -52,3 +52,26 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# VS Code
+.vscode/
+
+# Rider
+.idea/
+
+# Visual Studio user-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local settings
+*.dbmdl
+*.sdf
+*.vspscc
+*.vssscc
+.vs/
+
+# Entity Framework Migrations (se quiser ignorar snapshots ou binários)
+Migrations/**/*Designer.cs
+Migrations/*Snapshot.cs
