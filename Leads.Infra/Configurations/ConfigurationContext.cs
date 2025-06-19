@@ -125,6 +125,7 @@ namespace Leads.Infra.Configurations
                    .HasMaxLength(20)
                    .HasDefaultValue("Disponível");
             builder.Property(x => x.Timestamp).IsRequired();
+            builder.Property(x => x.UpdateAt);
 
             builder.HasOne(x => x.Lead)
                    .WithMany(x => x.Interests)

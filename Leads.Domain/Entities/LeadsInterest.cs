@@ -19,5 +19,6 @@ namespace Leads.Domain.Entities
         public Property Property { get; set; } = null!;
 
         public DateTime Timestamp { get; set; }
+        public DateTime UpdateAt { get; set; }
     }
 }
