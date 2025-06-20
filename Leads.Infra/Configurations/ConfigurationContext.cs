@@ -1,4 +1,5 @@
 ﻿using Leads.Domain.Entities;
+using Leads.Domain.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -123,9 +124,8 @@ namespace Leads.Infra.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.OfferPrice);
             builder.Property(x => x.Status)
-                   .IsRequired()
-                   .HasMaxLength(20)
-                   .HasDefaultValue("Disponível");
+                   .HasDefaultValue(StatusInterest.Disponivel)
+                   .IsRequired(false);
             builder.Property(x => x.Timestamp).IsRequired();
             builder.Property(x => x.UpdateAt);
 

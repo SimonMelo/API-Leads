@@ -11,9 +11,12 @@ namespace Leads.API.Extensions
         public static IServiceCollection AddDatabase(this IServiceCollection services, IConfiguration config)
         {
             services.AddDbContext<LeadDbContext>(options =>
-            options.UseMySql(config.GetConnectionString("DB_LEADS"), 
-            ServerVersion.AutoDetect(config.GetConnectionString("DB_LEADS"))
-            ));
+                options.UseMySql(
+                    config.GetConnectionString("DB_LEADS"),
+                    ServerVersion.AutoDetect(config.GetConnectionString("DB_LEADS")),
+                    b => b.MigrationsAssembly("Leads.Infra")
+                )
+            );
 
             return services;
         }
