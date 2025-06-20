@@ -16,7 +16,9 @@ namespace Leads.Infra.Configurations
             builder.HasKey(x => x.Id);
             builder.Property(x => x.NameUser).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Email).IsRequired().HasMaxLength(100);
+            builder.Property(x => x.Cpf).IsRequired().HasMaxLength(11);
             builder.Property(x => x.PasswordUser).IsRequired().HasMaxLength(200);
+            builder.Property(x => x.PasswordSalt).IsRequired().HasMaxLength(200);
             builder.Property(x => x.CreatedAt).IsRequired();
             builder.Property(x => x.Actived).IsRequired();
         }

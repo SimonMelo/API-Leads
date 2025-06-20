@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="IRespository\" />
+    <Folder Include="DTO\Requests\" />
+    <Folder Include="IServices\" />
+    <Folder Include="Validators\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
